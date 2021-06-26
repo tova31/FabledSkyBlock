@@ -1,0 +1,133 @@
+#Set this to true to enable the Minion Store
+Enabled: true
+#Store settings
+Store:
+  Settings:
+    DisplayName: "&eMinion Store"
+    Size: 36 #Must be a multiple of 9
+  FillerItem: #This can be called anything
+    Slot: filler #Either specify a slot ID, or specify filler to fill empty spaces
+    Item: STAINED_GLASS_PANE:7 #Put damage of the material after a :
+    Action: none #Possible Actions: CLOSE, <MinionName> to purchase a minion, or none
+    Cost: 0 #cost - must be integer
+    DisplayName: " "
+    Lore: [] #Possible placeholders - %PLAYERSMINIONS% for the number of minions the player has placed, %PLAYERSMINIONS_TYPE% for the number of minions of that type they have placed, and %MAXMINIONS%/%MAXMINIONS_TYPE% for the maxmimum allowed minions the player can place
+  MinerMinion:
+    Slot: 10
+    Item: SKULL:Miner #If using a Skull, put Skull:<playersname>
+    Action: Miner
+    Cost: 3000
+    DisplayName: "&e&lMiner Minion"
+    Lore:
+      - "&aThe Miner Minion"
+      - "&aOnce placed will mine"
+      - "&athe block infront!"
+      - " "
+      - "&eCost: $3,000"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  CollectorMinion:
+    Slot: 11
+    Item: SKULL:quad8
+    Action: Collector
+    Cost: 3500
+    DisplayName: "&e&lCollector Minion"
+    Lore:
+      - "&aThe Collector Minion"
+      - "&awill collect all items"
+      - "&awithin its radius!"
+      - " "
+      - "&eCost: $3,500"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  FeederMinion:
+    Slot: 12
+    Item: SKULL:Cow
+    Action: Feeder
+    Cost: 3500
+    DisplayName: "&e&lFeeder Minion"
+    Lore:
+      - "&aThe Feeder Minion"
+      - "&awill feed all nearby"
+      - "&aMinions within its radius!"
+      - " "
+      - "&eCost: $3,500"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  FisherMinion:
+    Slot: 13
+    Item: SKULL:03z
+    Action: Fisher
+    Cost: 3500
+    DisplayName: "&e&lFisher Minion"
+    Lore:
+      - "&aThe Fisher Minion"
+      - "&awill fish those in a"
+      - "&awater-pool infront!"
+      - " "
+      - "&eCost: $3,500"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  FarmerMinion:
+    Slot: 14
+    Item: SKULL:Farmer
+    Action: Farmer
+    Cost: 4000
+    DisplayName: "&e&lFarmer Minion"
+    Lore:
+      - "&aThe Farmer Minion"
+      - "&awill farm all crops"
+      - "&athat it is placed next to"
+      - " "
+      - "&eCost: $4,000"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  LumberMinion:
+    Slot: 15
+    Item: SKULL:Builder
+    Action: Lumberjack
+    Cost: 4500
+    DisplayName: "&e&lLumberjack Minion"
+    Lore:
+      - "&aThe Lumberjack Minion"
+      - "&awill chop all trees nearby"
+      - "&aand replant them"
+      - " "
+      - "&eCost: $4,500"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  SlayerMinion:
+    Slot: 16
+    Item: SKULL:1mBatman
+    Action: Slayer
+    Cost: 5000
+    DisplayName: "&e&lSlayer Minion"
+    Lore:
+      - "&aThe Slayer Minion"
+      - "&awill kill all mobs"
+      - "&awithin its radius!"
+      - " "
+      - "&eCost: $5,000"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  SellerMinion:
+    Slot: 22
+    Item: SKULL:Seller
+    Action: Seller
+    Cost: 10000
+    DisplayName: "&e&lSeller Minion"
+    Lore:
+      - "&aThe Seller Minion"
+      - "&awill sell all items"
+      - "&ain its attached chest!"
+      - " "
+      - "&eCost: $10,000"
+      - " "
+      - "&7You have placed &c%PLAYERSMINIONS_TYPE%/%MAXMINIONS_TYPE% &7Minions"
+  Close:
+    Slot: 31
+    Item: BARRIER:0
+    Action: close
+    Cost: 0
+    DisplayName: "&c&lClose"
+    Lore: []
